@@ -54,7 +54,6 @@ public class UsuarioController extends HttpServlet {
                 case "/loginUser":
                     username = request.getParameter("username");
                     password = request.getParameter("password");
-                    // verificar si existe el usuario y si coincide la clave
                     boolean existeUsuario = udao.login(username, password);
                     session.setAttribute("isLogin", existeUsuario);
                     session.setAttribute("actualUsername", username);
