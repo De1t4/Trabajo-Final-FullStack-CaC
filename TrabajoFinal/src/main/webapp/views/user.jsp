@@ -1,4 +1,3 @@
-
 <%@include file="/views/partials/header.jsp" %>
 
     <main class="content-user-login">

@@ -6,10 +6,6 @@ package model;
 
 import java.util.Date;
 
-/**
- *
- * @author pepe
- */
 public class Usuario {
     private String username;
     private String password;

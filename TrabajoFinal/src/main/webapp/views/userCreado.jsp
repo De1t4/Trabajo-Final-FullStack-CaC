@@ -1,6 +1,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%@include file="/views/partials/header.jsp" %>
+<%
+  if ((boolean)session.getAttribute("isLogin")){
+    response.sendRedirect("/");
+  }  
+%>
 
     <main class="content-create-user">
         <div class="create-user">

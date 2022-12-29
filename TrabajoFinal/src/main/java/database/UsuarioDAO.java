@@ -12,22 +12,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import model.Usuario;
 
-/**
- *
- * @author jose
- */
 public class UsuarioDAO {
     
     private Connection connection;
     
     public UsuarioDAO(){
         DBConn conn = new DBConn();
-        String DB = "usuarios";
+        String DB = "trabajofinal";
         String userDB = "root";
         String passDB = "locoartas";
         //connection = conn.getConnection("TrabajoFinal", "root", "locoartas");
         connection = conn.getConnection(DB, userDB, passDB);
     }
+    
     public Usuario getUserByUsername(String username) throws SQLException {
         PreparedStatement ps;
         ResultSet rs;
@@ -49,7 +46,7 @@ public class UsuarioDAO {
         return u;
     }
     
-   public int createUser(Usuario u) throws SQLException {
+    public int createUser(Usuario u) throws SQLException {
         PreparedStatement ps;
         int lineasAfectadas;
         
@@ -66,7 +63,7 @@ public class UsuarioDAO {
         lineasAfectadas = ps.executeUpdate();
         return lineasAfectadas;
     }
-
+    
     public boolean login(String userInput, String passInput) throws SQLException {
         PreparedStatement ps;
         ResultSet rs;
