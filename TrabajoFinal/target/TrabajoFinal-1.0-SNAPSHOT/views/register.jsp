@@ -11,27 +11,27 @@
 %>
 
 <main class="content-register">
-    <form class="row g-3" method="POST" action="/TrabajoFinal/usuario/createUser">
+    <form class="row g-3" method="POST" action="/TrabajoFinal/usuario/userCreate">
         <h1 class="mb-4">Crear cuenta </h1>
         <div class="col-md-12">
-            <label for="validationDefault02" class="form-label">Usuario</label>
-            <input type="text" class="form-control" name="username" id="validationDefault02" placeholder="MarkOttoo123" required>
+            <label for="username" class="form-label">Usuario</label>
+            <input type="text" class="form-control" name="username" id="username" placeholder="MarkOttoo123">
         </div>
         <div class="col-md-12">
-            <label for="validationDefault02" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" name="password" id="validationDefault02" placeholder="Contraseña" required>
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" >
         </div>
         <div class="col-md-6">
-          <label for="validationDefault01" class="form-label">Nombre</label>
-          <input type="text" class="form-control" name="name" id="validationDefault01" placeholder="Mark" required>
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" class="form-control" name="name" id="name" placeholder="Mark" >
         </div>
         <div class="col-md-6">
-          <label for="validationDefault02" class="form-label">Apellido</label>
-          <input type="text" class="form-control" name="last_name" id="validationDefault02" placeholder="Otto" required>
+          <label for="last_name" class="form-label">Apellido</label>
+          <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Otto">
         </div>
         <div class="col-md-12">
-            <label for="validationDefault02" class="form-label">Mail</label>
-            <input type="text" class="form-control" name="email" id="validationDefault02" placeholder="ejemplo@gmail.com" required>
+            <label for="email" class="form-label">Mail</label>
+            <input type="text" class="form-control" name="email" id="email" placeholder="ejemplo@gmail.com">
         </div>
         <div class="col-12">
           <button class="btn btn-primary" type="submit">Registrarme</button>

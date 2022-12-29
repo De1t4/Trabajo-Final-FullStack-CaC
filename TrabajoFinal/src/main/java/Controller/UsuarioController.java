@@ -65,8 +65,9 @@ public class UsuarioController extends HttpServlet {
                     session.setAttribute("actualUsername", "");
                     response.sendRedirect("/TrabajoFinal/main.jsp");
                     break;
+                    
             case "/createUser":
-                    username = request.getParameter("username");
+                  username = request.getParameter("username");
                     if( udao.getUserByUsername(username) == null){
                         password = request.getParameter("password");
                         name = request.getParameter("name");

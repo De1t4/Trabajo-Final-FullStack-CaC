@@ -22,10 +22,10 @@ public class UsuarioDAO {
     
     public UsuarioDAO(){
         DBConn conn = new DBConn();
-        String DB = "cac_usuarios";
+        String DB = "usuarios";
         String userDB = "root";
         String passDB = "locoartas";
-        //connection = conn.getConnection("homebanking", "root", "1234");
+        //connection = conn.getConnection("TrabajoFinal", "root", "locoartas");
         connection = conn.getConnection(DB, userDB, passDB);
     }
     public Usuario getUserByUsername(String username) throws SQLException {
@@ -49,7 +49,7 @@ public class UsuarioDAO {
         return u;
     }
     
-    public int createUser(Usuario u) throws SQLException {
+   public int createUser(Usuario u) throws SQLException {
         PreparedStatement ps;
         int lineasAfectadas;
         
@@ -63,36 +63,6 @@ public class UsuarioDAO {
         ps.setString(4, u.getLast_name());
         ps.setString(5, u.getEmail());
          
-        lineasAfectadas = ps.executeUpdate();
-        return lineasAfectadas;
-    }
-
-    public int updateUser(Usuario u) throws SQLException {
-        PreparedStatement ps;
-        int lineasAfectadas;
-        
-        String pQuery = "UPDATE users SET password = ?, name = ?, last_name = ?, email = ?"
-                + " WHERE username = ?;";
-        ps = connection.prepareStatement(pQuery);
-        
-        ps.setString(1, u.getPassword());
-        ps.setString(2, u.getName());
-        ps.setString(3, u.getLast_name());
-        ps.setString(4, u.getEmail());
-        ps.setString(5, u.getUsername());
-         
-        lineasAfectadas = ps.executeUpdate();
-        return lineasAfectadas;
-    }
-    
-    public int deleteUser(String username) throws SQLException {
-        PreparedStatement ps;
-        int lineasAfectadas;
-        
-        String pQuery = "DELETE FROM users WHERE username = ?;";
-        ps = connection.prepareStatement(pQuery);
-        
-        ps.setString(1, username);
         lineasAfectadas = ps.executeUpdate();
         return lineasAfectadas;
     }

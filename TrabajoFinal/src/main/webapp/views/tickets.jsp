@@ -63,5 +63,5 @@
             </form>
         </div>
     </main>
-
+    <script src="/TrabajoFinal/js/ticket.js"></script>>
 <%@include file="/views/partials/footer.jsp" %>
